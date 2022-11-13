@@ -45,6 +45,7 @@
 		23F0B317292166940061B933 /* MarvelSwiftUICombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelSwiftUICombineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F0B31B292166940061B933 /* MarvelSwiftUICombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelSwiftUICombineUITests.swift; sourceTree = "<group>"; };
 		23F0B31D292166940061B933 /* MarvelSwiftUICombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelSwiftUICombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23F0B32E292166D10061B933 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		23F0B2F3292166920061B933 = {
 			isa = PBXGroup;
 			children = (
+				23F0B32E292166D10061B933 /* README.md */,
 				23F0B2FE292166920061B933 /* MarvelSwiftUICombine */,
 				23F0B310292166940061B933 /* MarvelSwiftUICombineTests */,
 				23F0B31A292166940061B933 /* MarvelSwiftUICombineUITests */,
@@ -95,7 +97,9 @@
 		23F0B2FE292166920061B933 /* MarvelSwiftUICombine */ = {
 			isa = PBXGroup;
 			children = (
-				23F0B2FF292166920061B933 /* MarvelSwiftUICombineApp.swift */,
+				23F0B32A292166AE0061B933 /* App */,
+				23F0B32B292166B40061B933 /* Domain */,
+				23F0B32F2921672E0061B933 /* UI */,
 				23F0B301292166920061B933 /* ContentView.swift */,
 				23F0B303292166930061B933 /* Assets.xcassets */,
 				23F0B305292166930061B933 /* MarvelSwiftUICombine.entitlements */,
@@ -127,6 +131,68 @@
 				23F0B31D292166940061B933 /* MarvelSwiftUICombineUITestsLaunchTests.swift */,
 			);
 			path = MarvelSwiftUICombineUITests;
+			sourceTree = "<group>";
+		};
+		23F0B32A292166AE0061B933 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				23F0B2FF292166920061B933 /* MarvelSwiftUICombineApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		23F0B32B292166B40061B933 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				23F0B32D292166C00061B933 /* Tools */,
+				23F0B32C292166BA0061B933 /* Services */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		23F0B32C292166BA0061B933 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		23F0B32D292166C00061B933 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		23F0B32F2921672E0061B933 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				23F0B330292167490061B933 /* Root */,
+				23F0B331292167550061B933 /* Heroes */,
+				23F0B3322921675D0061B933 /* Comics */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		23F0B330292167490061B933 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		23F0B331292167550061B933 /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
+		23F0B3322921675D0061B933 /* Comics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Comics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
