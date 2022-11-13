@@ -44,4 +44,3 @@ struct Thumbnail: Codable {
 enum Extension: String, Codable {
     case jpg = "jpg"
 }
-
