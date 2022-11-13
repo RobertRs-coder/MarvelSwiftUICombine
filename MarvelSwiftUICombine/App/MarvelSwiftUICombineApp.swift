@@ -12,7 +12,7 @@ struct MarvelSwiftUICombineApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-                .environmentObject(RootViewModel())
+                .environmentObject(HeroesViewModel())
         }
     }
 }

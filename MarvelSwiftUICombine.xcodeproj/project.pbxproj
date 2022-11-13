@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235DA04C2921B4E400748122 /* HeroesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DA04B2921B4E400748122 /* HeroesView.swift */; };
+		235DA04D2921B4E400748122 /* HeroesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DA04B2921B4E400748122 /* HeroesView.swift */; };
+		235DA04E2921B4E400748122 /* HeroesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DA04B2921B4E400748122 /* HeroesView.swift */; };
 		23F0B300292166920061B933 /* MarvelSwiftUICombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B2FF292166920061B933 /* MarvelSwiftUICombineApp.swift */; };
 		23F0B302292166920061B933 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B301292166920061B933 /* RootView.swift */; };
 		23F0B304292166930061B933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F0B303292166930061B933 /* Assets.xcassets */; };
@@ -20,9 +23,9 @@
 		23F0B33A292184B60061B933 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B339292184B60061B933 /* BaseNetwork.swift */; };
 		23F0B33B292184B60061B933 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B339292184B60061B933 /* BaseNetwork.swift */; };
 		23F0B33C292184B60061B933 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B339292184B60061B933 /* BaseNetwork.swift */; };
-		23F0B3402921A6EC0061B933 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B33F2921A6EC0061B933 /* RootViewModel.swift */; };
-		23F0B3412921A6EC0061B933 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B33F2921A6EC0061B933 /* RootViewModel.swift */; };
-		23F0B3422921A6EC0061B933 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B33F2921A6EC0061B933 /* RootViewModel.swift */; };
+		23F0B3402921A6EC0061B933 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B33F2921A6EC0061B933 /* HeroesViewModel.swift */; };
+		23F0B3412921A6EC0061B933 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B33F2921A6EC0061B933 /* HeroesViewModel.swift */; };
+		23F0B3422921A6EC0061B933 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B33F2921A6EC0061B933 /* HeroesViewModel.swift */; };
 		23F0B3442921A7DD0061B933 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B3432921A7DD0061B933 /* StatusModel.swift */; };
 		23F0B3452921A7DD0061B933 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B3432921A7DD0061B933 /* StatusModel.swift */; };
 		23F0B3462921A7DD0061B933 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B3432921A7DD0061B933 /* StatusModel.swift */; };
@@ -46,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		235DA04B2921B4E400748122 /* HeroesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesView.swift; sourceTree = "<group>"; };
 		23F0B2FC292166920061B933 /* MarvelSwiftUICombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelSwiftUICombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F0B2FF292166920061B933 /* MarvelSwiftUICombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelSwiftUICombineApp.swift; sourceTree = "<group>"; };
 		23F0B301292166920061B933 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -60,7 +64,7 @@
 		23F0B32E292166D10061B933 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		23F0B335292174100061B933 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		23F0B339292184B60061B933 /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
-		23F0B33F2921A6EC0061B933 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		23F0B33F2921A6EC0061B933 /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
 		23F0B3432921A7DD0061B933 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		235DA0492921B23500748122 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				235DA04B2921B4E400748122 /* HeroesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		235DA04A2921B23B00748122 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				23F0B33F2921A6EC0061B933 /* HeroesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		23F0B2F3292166920061B933 = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				23F0B33D2921A6C10061B933 /* Views */,
-				23F0B33E2921A6C80061B933 /* ViewModels */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -203,6 +222,8 @@
 		23F0B331292167550061B933 /* Heroes */ = {
 			isa = PBXGroup;
 			children = (
+				235DA0492921B23500748122 /* Views */,
+				235DA04A2921B23B00748122 /* ViewModels */,
 			);
 			path = Heroes;
 			sourceTree = "<group>";
@@ -237,14 +258,6 @@
 				23F0B301292166920061B933 /* RootView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		23F0B33E2921A6C80061B933 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				23F0B33F2921A6EC0061B933 /* RootViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,8 +390,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23F0B3402921A6EC0061B933 /* RootViewModel.swift in Sources */,
+				23F0B3402921A6EC0061B933 /* HeroesViewModel.swift in Sources */,
 				23F0B336292174100061B933 /* CharacterModel.swift in Sources */,
+				235DA04C2921B4E400748122 /* HeroesView.swift in Sources */,
 				23F0B33A292184B60061B933 /* BaseNetwork.swift in Sources */,
 				23F0B3442921A7DD0061B933 /* StatusModel.swift in Sources */,
 				23F0B302292166920061B933 /* RootView.swift in Sources */,
@@ -390,10 +404,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235DA04D2921B4E400748122 /* HeroesView.swift in Sources */,
 				23F0B3452921A7DD0061B933 /* StatusModel.swift in Sources */,
 				23F0B33B292184B60061B933 /* BaseNetwork.swift in Sources */,
 				23F0B337292174100061B933 /* CharacterModel.swift in Sources */,
-				23F0B3412921A6EC0061B933 /* RootViewModel.swift in Sources */,
+				23F0B3412921A6EC0061B933 /* HeroesViewModel.swift in Sources */,
 				23F0B312292166940061B933 /* MarvelSwiftUICombineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,8 +417,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23F0B3422921A6EC0061B933 /* RootViewModel.swift in Sources */,
+				23F0B3422921A6EC0061B933 /* HeroesViewModel.swift in Sources */,
 				23F0B338292174100061B933 /* CharacterModel.swift in Sources */,
+				235DA04E2921B4E400748122 /* HeroesView.swift in Sources */,
 				23F0B33C292184B60061B933 /* BaseNetwork.swift in Sources */,
 				23F0B3462921A7DD0061B933 /* StatusModel.swift in Sources */,
 				23F0B31C292166940061B933 /* MarvelSwiftUICombineUITests.swift in Sources */,

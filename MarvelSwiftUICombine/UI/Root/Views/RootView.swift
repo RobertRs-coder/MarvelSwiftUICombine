@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct RootView: View {
-    @EnvironmentObject var rootViewModel: RootViewModel
+    @EnvironmentObject var viewModel: HeroesViewModel
     var body: some View {
-        switch rootViewModel.status {
+        switch viewModel.status {
         case .main:
-            Text("Main")
+            Text("Start App")
         case .loading:
-            Text("Main")
+            Text("Loading")
         case .error(error: let errorString):
-            Text("Main\(errorString)")
+            Text("Error\(errorString)")
+        case .loaded:
+            HeroesView()
         }
     }
 }
@@ -25,6 +27,6 @@ struct RootView: View {
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
-            .environmentObject(RootViewModel())
+            .environmentObject(HeroesViewModel())
     }
 }
