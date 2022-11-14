@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HeroesRowView: View {
     var hero: Hero
+//    @State private var heroDescription: String
     
     var body: some View {
         
@@ -19,6 +20,7 @@ struct HeroesRowView: View {
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(15)
                     .padding([.leading,.trailing], 5)
+                    .background(.mint)
                 
             } placeholder: {
                 Image(systemName: "photo")
@@ -28,12 +30,24 @@ struct HeroesRowView: View {
                     .padding([.leading,.trailing], 5)
             }
             Text("\(hero.name)")
-                .font(Font.custom("Marker Felt Thin", size: 24, relativeTo: .title2))
+                .font(Font.custom("Marker Felt Thin", size: 26, relativeTo: .title2))
 //                .bold()
                 .padding(10)
+            
+            if hero.description.isEmpty{
+                Text("No description")
+                        .font(Font.custom("Marker Felt Thin", size: 18, relativeTo: .title2))
+        //                .bold()
+                        .padding(10)
+            }else{
+                Text(hero.description)
+                        .font(Font.custom("Marker Felt Thin", size: 18, relativeTo: .title2))
+        //                .bold()
+                        .padding(10)
+            }
         }
         .padding()
-        .background(Color.mint)
+//        .background(Color.clear)
         .cornerRadius(15)
         .opacity(0.6)
     }
@@ -41,6 +55,6 @@ struct HeroesRowView: View {
 
 struct HerosRowView_Previews: PreviewProvider {
     static var previews: some View {
-        HeroesRowView(hero: Hero(id: 1, name: "Hit-Monkey", description: "", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/6/30/4ce69c2246c21", thumbnailExtension: .jpg), resourceURI: ""))
+        HeroesRowView(hero: Hero(id: 1, name: "Hit-Monkey", description: "Something", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/6/30/4ce69c2246c21", thumbnailExtension: .jpg), resourceURI: ""))
     }
 }
