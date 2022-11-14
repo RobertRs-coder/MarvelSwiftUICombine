@@ -28,14 +28,14 @@ struct HeroesRowView: View {
                     .padding([.leading,.trailing], 5)
             }
             Text("\(hero.name)")
-                .font(.title2)
-                .bold()
+                .font(Font.custom("Marker Felt Thin", size: 24, relativeTo: .title2))
+//                .bold()
                 .padding(10)
         }
         .padding()
         .background(Color.mint)
         .cornerRadius(15)
-        .opacity(0.8)
+        .opacity(0.6)
     }
 }
 

@@ -22,7 +22,6 @@ struct HeroesView: View {
             }
             .scrollContentBackground(.hidden)
             .background(Color.teal)
-
         }
     }
 }

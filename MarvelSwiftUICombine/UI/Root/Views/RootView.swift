@@ -14,9 +14,9 @@ struct RootView: View {
         case .none:
             Text("Dafault Status")
         case .loading:
-            Text("Loading")
+            LoadingView()
         case .error(error: let errorString):
-            Text("Error\(errorString)")
+            ErrorView(error: errorString)
         case .loaded:
             HeroesView()
         }
