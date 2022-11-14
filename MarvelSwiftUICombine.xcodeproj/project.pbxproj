@@ -62,6 +62,7 @@
 		235DA04F2921C5AC00748122 /* HeroesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRowView.swift; sourceTree = "<group>"; };
 		235DA0552921CD7900748122 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		235DA0592921CD8100748122 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		235DA05D2922578600748122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23F0B2FC292166920061B933 /* MarvelSwiftUICombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelSwiftUICombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F0B2FF292166920061B933 /* MarvelSwiftUICombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelSwiftUICombineApp.swift; sourceTree = "<group>"; };
 		23F0B301292166920061B933 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -163,6 +164,7 @@
 		23F0B2FE292166920061B933 /* MarvelSwiftUICombine */ = {
 			isa = PBXGroup;
 			children = (
+				235DA05D2922578600748122 /* Info.plist */,
 				23F0B32A292166AE0061B933 /* App */,
 				23F0B32B292166B40061B933 /* Domain */,
 				23F0B32F2921672E0061B933 /* UI */,
@@ -603,6 +605,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelSwiftUICombine/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelSwiftUICombine/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -641,6 +644,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelSwiftUICombine/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelSwiftUICombine/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

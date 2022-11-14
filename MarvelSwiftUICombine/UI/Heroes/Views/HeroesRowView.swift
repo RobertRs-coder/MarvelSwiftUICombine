@@ -13,7 +13,7 @@ struct HeroesRowView: View {
     var body: some View {
         
         VStack{
-            AsyncImage(url: URL(string: hero.thumbnail.path)) { photoDownloaded in
+            AsyncImage(url: URL(string: "\(hero.thumbnail.path)/portrait_xlarge.jpg")) { photoDownloaded in
                 photoDownloaded
                     .resizable()
                     .aspectRatio(contentMode: .fit)
