@@ -1,5 +1,5 @@
 //
-//  MarvelModels.swift
+//  HeroModel.swift
 //  MarvelSwiftUICombine
 //
 //  Created by Roberto Rojo Sahuquillo on 13/11/22.
@@ -7,22 +7,22 @@
 
 import Foundation
 
-// MARK: - CharacterDataWrapper
-struct CharacterDataWrapper: Codable {
+// MARK: - HeroDataWrapper
+struct HeroDataWrapper: Codable {
     let code: Int
     let status, copyright, attributionText, attributionHTML: String
     let etag: String
-    let data: CharacterDataContainer
+    let data: HeroDataContainer
 }
 
-// MARK: - CharacterDataContainer
-struct CharacterDataContainer: Codable {
+// MARK: - HeroDataContainer
+struct HeroDataContainer: Codable {
     let offset, limit, total, count: Int
-    let results: [Character]
+    let results: [Hero]
 }
 
-// MARK: - Character
-struct Character: Codable , Identifiable{
+// MARK: - Hero
+struct Hero: Codable , Identifiable{
     let id: Int
     let name: String
     let description: String

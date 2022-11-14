@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 final class HeroesViewModel: ObservableObject {
-    @Published var heroes: [Character]?
+    @Published var heroes: [Hero]?
     @Published var status = Status.none
     
     private var subscribers = Set<AnyCancellable>()
@@ -31,7 +31,7 @@ final class HeroesViewModel: ObservableObject {
                 }
                 return $0.data
             }
-            .decode(type: CharacterDataWrapper.self, decoder: JSONDecoder())
+            .decode(type: HeroDataWrapper.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {

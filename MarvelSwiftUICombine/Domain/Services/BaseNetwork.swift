@@ -30,7 +30,7 @@ struct BaseNetwork{
     
     func getSessionCharacters() -> URLRequest{
         //Create url with need it parameters
-        var url = URL(string: "\(server)\(endpoint.characters.rawValue)?apikey=\(parameters.apiKey.rawValue)&ts=\(parameters.ts.rawValue)&hash=\(parameters.hash.rawValue)&orderBy=-modified")
+        let url = URL(string: "\(server)\(endpoint.characters.rawValue)?apikey=\(parameters.apiKey.rawValue)&ts=\(parameters.ts.rawValue)&hash=\(parameters.hash.rawValue)&orderBy=-modified")
         //Create request from url
         var request = URLRequest(url: url!)
         request.httpMethod = HTTPMethods.get

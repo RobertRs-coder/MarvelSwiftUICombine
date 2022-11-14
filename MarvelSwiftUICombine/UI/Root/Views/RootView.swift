@@ -11,8 +11,8 @@ struct RootView: View {
     @EnvironmentObject var viewModel: HeroesViewModel
     var body: some View {
         switch viewModel.status {
-        case .main:
-            Text("Start App")
+        case .none:
+            Text("Dafault Status")
         case .loading:
             Text("Loading")
         case .error(error: let errorString):
