@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct MediaView: View {
-    @StateObject var viewModel: MediaViewModel
+    @ObservedObject var viewModel: MediaViewModel
     
     
     var body: some View {
-        ComicsView(viewModel: MediaViewModel(hero: viewModel.hero))
+        NavigationStack{
+            ComicsView(viewModel: viewModel)
+        }
     }
 }
 
 struct MediaView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaView(viewModel: MediaViewModel(hero: Hero(id: 1, name: "Hit-Monkey", description: "Something", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/6/30/4ce69c2246c21", thumbnailExtension: .jpg), resourceURI: "")))
+        MediaView(viewModel: MediaViewModel(heroId: 1009175))
     }
 }

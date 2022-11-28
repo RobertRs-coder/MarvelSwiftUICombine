@@ -20,14 +20,15 @@ struct MediaMainView: View {
         case .loading:
             LoadingView()
         case .error(error: let errorString):
-            ErrorView(error: errorString)
+            ErrorMediaView(error: errorString)
         case .loaded:
-            MediaMainView(viewModel: viewModel)
+            MediaView(viewModel: viewModel)
+        }
     }
 }
 
 struct MediaMainView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaMainView(viewModel: MediaViewModel(hero: Hero(id: 1, name: "Hit-Monkey", description: "Something", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/6/30/4ce69c2246c21", thumbnailExtension: .jpg), resourceURI: "")))
+        MediaMainView(viewModel: MediaViewModel(heroId: 1009175))
     }
 }

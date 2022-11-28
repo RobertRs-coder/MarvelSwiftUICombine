@@ -11,7 +11,7 @@ import SwiftUI
 struct DragonBallSwiftUICombineWatch_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView()
+            HeroesMainView()
                 .environmentObject(HeroesViewModel())
         }
     }

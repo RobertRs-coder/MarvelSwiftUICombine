@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ComicsView: View {
-    @StateObject var viewModel: MediaViewModel?
+    @ObservedObject var viewModel: MediaViewModel
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
@@ -48,6 +48,6 @@ struct ComicsView: View {
 
 struct ComicsView_Previews: PreviewProvider {
     static var previews: some View {
-        ComicsView(viewModel: MediaViewModel(hero: Hero(id: 1, name: "Hit-Monkey", description: "Something", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/6/30/4ce69c2246c21", thumbnailExtension: .jpg), resourceURI: "")))
+        ComicsView(viewModel: MediaViewModel(heroId: 1009175))
     }
 }

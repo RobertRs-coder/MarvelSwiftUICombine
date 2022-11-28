@@ -11,7 +11,7 @@ import SwiftUI
 struct MarvelSwiftUICombineApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView()
+            HeroesMainView()
                 .environmentObject(HeroesViewModel())
         }
     }

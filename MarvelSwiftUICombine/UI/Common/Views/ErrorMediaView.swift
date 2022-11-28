@@ -1,14 +1,13 @@
 //
-//  ErrorView.swift
+//  ErrorMediaView.swift
 //  MarvelSwiftUICombine
 //
-//  Created by Roberto Rojo Sahuquillo on 14/11/22.
+//  Created by Roberto Rojo Sahuquillo on 28/11/22.
 //
 
 import SwiftUI
 
-struct ErrorView: View {
-    @EnvironmentObject var rootViewModel: RootViewModel
+struct ErrorMediaView: View {
     private var textError: String
     
     init(error: String){
@@ -32,26 +31,13 @@ struct ErrorView: View {
                     .foregroundColor(.red)
                     .font(.headline)
                 Spacer()
-                Button {
-                    //Return Login with rootViewModel.status
-                    rootViewModel.status = .heroes
-                } label: {
-                    Text("Return Heroes")
-//                        .font(.title2)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(width: 200, height: 50)
-                        .background(.orange)
-                        .cornerRadius(20)
-                        .shadow(radius: 10.0, x: 20, y: 15)
-                }
             }
         }
     }
 }
 
-struct ErrorView_Previews: PreviewProvider {
+struct ErrorMediaView_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorView(error: "Error test")
+        ErrorMediaView(error: "Error test")
     }
 }

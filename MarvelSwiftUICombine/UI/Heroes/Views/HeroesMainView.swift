@@ -12,16 +12,16 @@ struct HeroesMainView: View {
     
     var body: some View {
         
-        switch rootViewModel.status {
+        switch viewModel.status {
             
         case .none:
             Text("Start App")
         case .loading:
             LoadingView()
         case .error(error: let errorString):
-            ErrorView(error: errorString)
+            ErrorHeroesView(error: errorString)
         case .loaded:
-            HeroesView(viewModel: HeroesViewModel())
+            HeroesView()
         }
     }
 }
@@ -30,6 +30,6 @@ struct HeroesMainView: View {
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         HeroesMainView()
-            .environmentObject(RootViewModel())
+            .environmentObject(HeroesViewModel())
     }
 }

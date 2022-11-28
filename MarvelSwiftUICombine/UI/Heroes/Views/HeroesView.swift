@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HeroesView: View {
-    @StateObject var viewModel: HeroesViewModel
+    @EnvironmentObject var viewModel: HeroesViewModel
     
     
     var body: some View {
@@ -17,7 +17,7 @@ struct HeroesView: View {
                 if let heroes = viewModel.heroes{
                     ForEach(heroes) { hero in
                         NavigationLink {
-                            MediaMainView(viewModel: MediaViewModel(hero: hero))
+                            MediaMainView(viewModel: MediaViewModel(heroId: hero.id))
                         } label: {
                             HeroesRowView(hero: hero)
                         }
@@ -35,6 +35,7 @@ struct HeroesView: View {
 
 struct HeroesView_Previews: PreviewProvider {
     static var previews: some View {
-        HeroesView(viewModel: HeroesViewModel())
+        HeroesView()
+            .environmentObject(HeroesViewModel())
     }
 }
