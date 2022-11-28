@@ -40,15 +40,7 @@ struct BaseNetwork{
         return request
     }
     
-//    func getSessionHeroSeries(heroId: Int) -> URLRequest{
-//        //Create url with need it parameters
-//        let url = URL(string: "\(server)\(endpoint.characters.rawValue)/\(heroId)\(endpoint.series.rawValue)?apikey=\(parameters.apiKey.rawValue)&ts=\(parameters.ts.rawValue)&hash=\(parameters.hash.rawValue)&orderBy=-modified")
-//        //Create request from url
-//        var request = URLRequest(url: url!)
-//        request.httpMethod = HTTPMethods.get
-//
-//        return request
-//    }
+
     
     func getSessionHeroComics(heroId: Int) -> URLRequest{
         //Create url with need it parameters
@@ -59,4 +51,14 @@ struct BaseNetwork{
         
         return request
     }
+    
+        func getSessionHeroSeries(heroId: Int) -> URLRequest{
+            //Create url with need it parameters
+            let url = URL(string: "\(server)\(endpoint.characters.rawValue)/\(heroId)\(endpoint.series.rawValue)?apikey=\(parameters.apiKey.rawValue)&ts=\(parameters.ts.rawValue)&hash=\(parameters.hash.rawValue)&orderBy=-modified")
+            //Create request from url
+            var request = URLRequest(url: url!)
+            request.httpMethod = HTTPMethods.get
+    
+            return request
+        }
 }

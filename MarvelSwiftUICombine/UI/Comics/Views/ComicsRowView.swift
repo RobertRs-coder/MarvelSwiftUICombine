@@ -36,26 +36,11 @@ struct ComicsRowView: View {
                         .frame(width:300, height: 100)
                         .bold()
                         .padding(10)
-            
-                    Text(comic.description ?? "No description")
-                        .frame(width:300, height: 400, alignment: .top)
-                        .padding(10)
-                        .lineLimit(50)//
-
-                    
                     
                 }
                 .padding(10)
                 
             }
-            
-            
-            
-        
-            
-       
-            
-            
         }
     }
 }
