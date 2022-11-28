@@ -2,26 +2,32 @@
 //  HeroesView.swift
 //  MarvelSwiftUICombine
 //
-//  Created by Roberto Rojo Sahuquillo on 14/11/22.
+//  Created by Roberto Rojo Sahuquillo on 20/11/22.
 //
 
 import SwiftUI
 
 struct HeroesView: View {
-    @EnvironmentObject var viewModel: HeroesViewModel
+    @StateObject var viewModel: HeroesViewModel
+    
     
     var body: some View {
         NavigationView{
             List{
                 if let heroes = viewModel.heroes{
                     ForEach(heroes) { hero in
-                        HeroesRowView(hero: hero)
+                        NavigationLink {
+                            MediaMainView(viewModel: MediaViewModel(hero: hero))
+                        } label: {
+                            HeroesRowView(hero: hero)
+                        }
+
                     }
-                    .listRowBackground(Color.teal)
+//                    .listRowBackground(Color.teal)
                 }
             }
-            .scrollContentBackground(.hidden)
-            .background(Color.teal)
+//            .scrollContentBackground(.hidden)
+//            .background(Color.teal)
         }
     }
 }
@@ -29,7 +35,6 @@ struct HeroesView: View {
 
 struct HeroesView_Previews: PreviewProvider {
     static var previews: some View {
-        HeroesView()
-            .environmentObject(HeroesViewModel())
+        HeroesView(viewModel: HeroesViewModel())
     }
 }

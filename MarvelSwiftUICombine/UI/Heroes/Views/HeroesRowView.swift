@@ -13,15 +13,13 @@ struct HeroesRowView: View {
     
     var body: some View {
         
-        VStack{
+        ZStack{
             AsyncImage(url: URL(string: "\(hero.thumbnail.path)/portrait_xlarge.jpg")) { photoDownloaded in
                 photoDownloaded
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(15)
                     .padding([.leading,.trailing], 5)
-                    .background(.mint)
-                
             } placeholder: {
                 Image(systemName: "photo")
                     .resizable()
@@ -29,27 +27,16 @@ struct HeroesRowView: View {
                     .cornerRadius(15)
                     .padding([.leading,.trailing], 5)
             }
+            
             Text("\(hero.name)")
                 .font(Font.custom("Marker Felt Thin", size: 26, relativeTo: .title2))
 //                .bold()
                 .padding(10)
-            
-            if hero.description.isEmpty{
-                Text("No description")
-                        .font(Font.custom("Marker Felt Thin", size: 18, relativeTo: .title2))
-        //                .bold()
-                        .padding(10)
-            }else{
-                Text(hero.description)
-                        .font(Font.custom("Marker Felt Thin", size: 18, relativeTo: .title2))
-        //                .bold()
-                        .padding(10)
-            }
         }
-        .padding()
-//        .background(Color.clear)
-        .cornerRadius(15)
-        .opacity(0.6)
+        .padding(20)
+        .background(Color.mint)
+        .cornerRadius(20)
+        .opacity(0.8)
     }
 }
 

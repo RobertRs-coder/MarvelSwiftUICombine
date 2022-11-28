@@ -7,18 +7,21 @@
 
 import SwiftUI
 
-struct RootView: View {
+struct HeroesMainView: View {
     @EnvironmentObject var viewModel: HeroesViewModel
+    
     var body: some View {
-        switch viewModel.status {
+        
+        switch rootViewModel.status {
+            
         case .none:
-            Text("Dafault Status")
+            Text("Start App")
         case .loading:
             LoadingView()
         case .error(error: let errorString):
             ErrorView(error: errorString)
         case .loaded:
-            HeroesView()
+            HeroesView(viewModel: HeroesViewModel())
         }
     }
 }
@@ -26,7 +29,7 @@ struct RootView: View {
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView()
-            .environmentObject(HeroesViewModel())
+        HeroesMainView()
+            .environmentObject(RootViewModel())
     }
 }

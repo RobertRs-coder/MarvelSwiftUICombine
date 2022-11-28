@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ErrorView: View {
-    @EnvironmentObject var viewModel: HeroesViewModel
+    @EnvironmentObject var rootViewModel: RootViewModel
     private var textError: String
     
     init(error: String){
@@ -34,7 +34,7 @@ struct ErrorView: View {
                 Spacer()
                 Button {
                     //Return Login with rootViewModel.status
-                    viewModel.status = .none
+                    rootViewModel.status = .heroes
                 } label: {
                     Text("Return Heroes")
 //                        .font(.title2)

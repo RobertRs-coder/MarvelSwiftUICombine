@@ -18,6 +18,8 @@ struct HTTPMethods {
 
 enum endpoint: String {
     case characters = "/v1/public/characters"
+    case series = "/series"
+    case comics = "/comics"
 }
 
 enum parameters: String {
@@ -28,9 +30,29 @@ enum parameters: String {
 
 struct BaseNetwork{
     
-    func getSessionCharacters() -> URLRequest{
+    func getSessionHeroes() -> URLRequest{
         //Create url with need it parameters
         let url = URL(string: "\(server)\(endpoint.characters.rawValue)?apikey=\(parameters.apiKey.rawValue)&ts=\(parameters.ts.rawValue)&hash=\(parameters.hash.rawValue)&orderBy=-modified")
+        //Create request from url
+        var request = URLRequest(url: url!)
+        request.httpMethod = HTTPMethods.get
+        
+        return request
+    }
+    
+    func getSessionHeroSeries(heroId: Int) -> URLRequest{
+        //Create url with need it parameters
+        let url = URL(string: "\(server)\(endpoint.characters.rawValue)/\(heroId)\(endpoint.comics.rawValue)?apikey=\(parameters.apiKey.rawValue)&ts=\(parameters.ts.rawValue)&hash=\(parameters.hash.rawValue)&orderBy=-modified")
+        //Create request from url
+        var request = URLRequest(url: url!)
+        request.httpMethod = HTTPMethods.get
+
+        return request
+    }
+    
+    func getSessionHeroComics(heroId: Int) -> URLRequest{
+        //Create url with need it parameters
+        let url = URL(string: "\(server)\(endpoint.characters.rawValue)/\(heroId)\(endpoint.series.rawValue)?apikey=\(parameters.apiKey.rawValue)&ts=\(parameters.ts.rawValue)&hash=\(parameters.hash.rawValue)&orderBy=-modified")
         //Create request from url
         var request = URLRequest(url: url!)
         request.httpMethod = HTTPMethods.get

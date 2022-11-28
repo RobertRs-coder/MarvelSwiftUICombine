@@ -13,7 +13,6 @@ struct MarvelSwiftUICombineApp: App {
         WindowGroup {
             RootView()
                 .environmentObject(HeroesViewModel())
-                .environment(\.font, .custom("Marker Felt Thin", size: 20))
         }
     }
 }

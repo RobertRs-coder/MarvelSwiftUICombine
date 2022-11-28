@@ -2,27 +2,31 @@
 //  HeroesViewModel.swift
 //  MarvelSwiftUICombine
 //
-//  Created by Roberto Rojo Sahuquillo on 13/11/22.
+//  Created by Roberto Rojo Sahuquillo on 20/11/22.
 //
 
 import Foundation
+import SwiftUI
 import Combine
 
 final class HeroesViewModel: ObservableObject {
+    
     @Published var heroes: [Hero]?
+//    @Published var comics: [Comic]?
+//    @Published var comics: [Comic]?
     @Published var status = Status.none
     
-    private var subscribers = Set<AnyCancellable>()
+    private var subscriptions = Set<AnyCancellable>()
     
     init(){
         getHeroes()
     }
-    
+        
     func getHeroes(){
         self.status = .loading
         
         URLSession.shared
-            .dataTaskPublisher(for: BaseNetwork().getSessionCharacters())
+            .dataTaskPublisher(for: BaseNetwork().getSessionHeroes())
             .tryMap{
                 guard let response = $0.response as? HTTPURLResponse,
                       response.statusCode == 200 else {
@@ -43,6 +47,9 @@ final class HeroesViewModel: ObservableObject {
             } receiveValue: { data in
                 self.heroes = data.data.results
             }
-            .store(in: &subscribers)
-    }
+            .store(in: &subscriptions)
+        
+        
+            }
 }
+
