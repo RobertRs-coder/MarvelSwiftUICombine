@@ -17,7 +17,7 @@ struct HeroesView: View {
                 if let heroes = viewModel.heroes{
                     ForEach(heroes) { hero in
                         NavigationLink {
-                            MediaMainView(viewModel: MediaViewModel(heroId: hero.id))
+                            MediaMainView(viewModel: MediaViewModel(heroId: hero.id, heroName: hero.name))
                         } label: {
                             HeroesRowView(hero: hero)
                         }

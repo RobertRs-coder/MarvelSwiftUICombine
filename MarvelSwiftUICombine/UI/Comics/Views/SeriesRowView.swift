@@ -2,49 +2,78 @@
 //  SeriesRowView.swift
 //  MarvelSwiftUICombine
 //
-//  Created by Roberto Rojo Sahuquillo on 28/11/22.
+//  Created by Roberto Rojo Sahuquillo on 29/11/22.
 //
+
 import SwiftUI
 
 struct SeriesRowView: View {
-    var serie: Serie
+    @ObservedObject var viewModel: MediaViewModel
+    @Binding var animationAmount: Int
+    
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false){
-            
-            ZStack{
-                VStack{
-                    AsyncImage(url: URL(string: "\(serie.thumbnail.path)/standard_xlarge.jpg")) { photoDownloaded in
-                        photoDownloaded
-                            .resizable()
-                            .frame(width:300, height: 300)
-                            .aspectRatio(contentMode: .fit)
-                            .cornerRadius(15)
-                            .padding([.leading,.trailing], 5)
-                    } placeholder: {
-                        Image(systemName: "photo")
-                            .resizable()
-                            .frame(width:300, height: 300)
-                            .aspectRatio(contentMode: .fit)
-                            .cornerRadius(15)
-                            .padding([.leading,.trailing], 5)
+        
+        ScrollView(.horizontal, showsIndicators: false){
+            HStack(spacing: 50){
+                if let series = viewModel.series{
+                    ForEach(series) { serie in
+                        GeometryReader { proxy in
+                            
+                                
+                            
+                            VStack{
+                                let scale = gesScale(proxy: proxy)
+                                
+                                AsyncImage(url: URL(string: "\(serie.thumbnail.path)/portrait_xlarge.jpg")) { photoDownloaded in
+                                    photoDownloaded
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 150)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 5)
+                                                .stroke(lineWidth: 0.5)
+                                        )
+                                        .clipped()
+                                        .cornerRadius(5)
+                                        .shadow(radius: 5)
+                                        .scaleEffect(CGSize(width: scale, height: scale))
+                                    //                                            .animation(.easeInOut(duration: 0.5))  //<iOS 16
+                                        .animation(.easeInOut(duration: 0.5), value: animationAmount)
+                                } placeholder: {
+                                    Image(systemName: "photo")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 150)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 5)
+                                                .stroke(lineWidth: 0.5)
+                                        )
+                                        .clipped()
+                                        .cornerRadius(5)
+                                        .shadow(radius: 5)
+                                        .scaleEffect(CGSize(width: scale, height: scale))
+                                    //                                            .animation(.easeInOut(duration: 0.5))  //<iOS 16
+                                        .animation(.easeInOut(duration: 0.5), value: animationAmount)
+                                }
+                                Text("\(serie.title)")
+                                    .padding(.top)
+                                    .multilineTextAlignment(.center)
+                            }
+                            
+                        }
+        //                            .background(.red) //At first is need it to see the exact frame
+                        .frame(width: 125, height: 300)
                     }
-                  
-                    Text("\(serie.title)")
-                        .lineLimit(2)//
-                        .frame(width:300, height: 100)
-                        .bold()
-                        .padding(10)
                 }
-                .padding(10)
-                
             }
+            .padding(32)
         }
     }
 }
 
 //struct SeriesRowView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        SeriesRowView()
+//        SeriesRowView(viewModel: MediaViewModel(heroId: <#Int#>), animationAmount: .constant(1))
 //    }
 //}

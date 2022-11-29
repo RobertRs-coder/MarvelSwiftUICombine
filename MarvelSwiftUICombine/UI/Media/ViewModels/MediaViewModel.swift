@@ -10,24 +10,27 @@ import SwiftUI
 import Combine
 
 final class MediaViewModel: ObservableObject {
-    
+    @Published var status = Status.none
     @Published var comics: [Comic]?
     @Published var series: [Serie]?
-//    @Published var comics: [Comic]?
-//    @Published var comics: [Comic]?
-    @Published var status = Status.none
-    var heroId: Int
     
+    var heroName: String
+    var heroId: Int
     
     private var subscriptions = Set<AnyCancellable>()
     
-    init(heroId: Int){
-        self.status = .loading
-
+    init(heroId: Int, heroName: String){
         
+        self.heroName = heroName
         self.heroId = heroId
-        getHeroesComics()
-        getHeroesSeries()
+        
+        self.status = .loading
+        
+        self.getHeroComics()
+        self.getHeroSeries()
+        
+        self.status = Status.loaded
+
     }
     
     //Cancel all subcribers
@@ -37,9 +40,9 @@ final class MediaViewModel: ObservableObject {
         }
     }
         
-    func getHeroesComics(){
+    func getHeroComics(){
 //        self.status = .loading
-        cancelAll()
+//        cancelAll()
         
         URLSession.shared
             .dataTaskPublisher(for: BaseNetwork().getSessionHeroComics(heroId: heroId))
@@ -58,6 +61,7 @@ final class MediaViewModel: ObservableObject {
                 case .failure(let error):
                     self.status = Status.error(error: error.localizedDescription)
                 case .finished:
+//                    self.status = Status.loaded
                     print("Success")
                 }
             } receiveValue: { data in
@@ -67,9 +71,10 @@ final class MediaViewModel: ObservableObject {
         
             }
     
-    func getHeroesSeries(){
+    
+    func getHeroSeries(){
 //        self.status = .loading
-        cancelAll()
+//        cancelAll()
         
         URLSession.shared
             .dataTaskPublisher(for: BaseNetwork().getSessionHeroSeries(heroId: heroId))
@@ -88,7 +93,8 @@ final class MediaViewModel: ObservableObject {
                 case .failure(let error):
                     self.status = Status.error(error: error.localizedDescription)
                 case .finished:
-                    self.status = Status.loaded
+//                    self.status = Status.loaded
+                    print("Success")
                 }
             } receiveValue: { data in
                 self.series = data.data.results
@@ -96,4 +102,5 @@ final class MediaViewModel: ObservableObject {
             .store(in: &subscriptions)
         
             }
+    
 }

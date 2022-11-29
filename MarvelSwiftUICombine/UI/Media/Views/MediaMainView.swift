@@ -29,6 +29,6 @@ struct MediaMainView: View {
 
 struct MediaMainView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaMainView(viewModel: MediaViewModel(heroId: 1009175))
+        MediaMainView(viewModel: MediaViewModel(heroId: 1009175, heroName: "Piggy Cater"))
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct DragonBallSwiftUICombineWatch_Watch_AppApp: App {
+struct MarvelSwiftUICombineApp_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
             HeroesMainView()
