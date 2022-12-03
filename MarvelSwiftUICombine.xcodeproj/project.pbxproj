@@ -147,6 +147,7 @@
 		23F0B339292184B60061B933 /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
 		23F0B3432921A7DD0061B933 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		23FDF7E32935E3B100442A5B /* SeriesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRowView.swift; sourceTree = "<group>"; };
+		23FDF7E82935E7D200442A5B /* MarvelSwiftUICombineWatchApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MarvelSwiftUICombineWatchApp-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				23F0B32E292166D10061B933 /* README.md */,
+				23FDF7E82935E7D200442A5B /* MarvelSwiftUICombineWatchApp-Info.plist */,
 				23F0B2FE292166920061B933 /* MarvelSwiftUICombine */,
 				23F0B310292166940061B933 /* MarvelSwiftUICombineTests */,
 				23F0B31A292166940061B933 /* MarvelSwiftUICombineUITests */,
@@ -713,6 +715,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DragonBallSwiftUICombineWatch Watch App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MarvelSwiftUICombineWatchApp-Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -741,6 +744,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DragonBallSwiftUICombineWatch Watch App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MarvelSwiftUICombineWatchApp-Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
 				LD_RUNPATH_SEARCH_PATHS = (

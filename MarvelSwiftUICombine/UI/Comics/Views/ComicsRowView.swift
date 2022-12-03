@@ -19,16 +19,18 @@ struct ComicsRowView: View {
                     ForEach(comics) { comic in
                         GeometryReader { proxy in
                             
-                                
-                            
                             VStack{
                                 let scale = gesScale(proxy: proxy)
                                 
-                                AsyncImage(url: URL(string: "\(comic.thumbnail.path)/portrait_xlarge.jpg")) { photoDownloaded in
+                                AsyncImage(url: URL(string: "\(comic.thumbnail.path)/standard_medium.jpg")) { photoDownloaded in
                                     photoDownloaded
                                         .resizable()
-                                        .scaledToFill()
+                                        #if os(watchOS)
+                                        .frame(width: 100, height: 100)
+                                        #else
                                         .frame(width: 150)
+                                        #endif
+                                        .scaledToFill()
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 5)
                                                 .stroke(lineWidth: 0.5)
@@ -42,8 +44,12 @@ struct ComicsRowView: View {
                                 } placeholder: {
                                     Image(systemName: "photo")
                                         .resizable()
-                                        .scaledToFill()
+                                        #if os(watchOS)
+                                        .frame(width: 100, height: 100)
+                                        #else
                                         .frame(width: 150)
+                                        #endif
+                                        .scaledToFill()
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 5)
                                                 .stroke(lineWidth: 0.5)
@@ -62,7 +68,11 @@ struct ComicsRowView: View {
                             
                         }
         //                            .background(.red) //At first is need it to see the exact frame
-                        .frame(width: 125, height: 300)
+                    #if os(watchOS)
+                    .frame(width: 75, height: 150)
+                    #else
+                    .frame(width: 125, height: 300)
+                    #endif
                     }
                 }
             }
@@ -71,8 +81,8 @@ struct ComicsRowView: View {
     }
 }
 
-//struct SeriesRowView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SeriesRowView()
-//    }
-//}
+struct ComicsRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        ComicsRowView(viewModel: MediaViewModel(heroId: 1017857, heroName: "Peggy Carter (Captain Carter)"), animationAmount: .constant(1))
+    }
+}

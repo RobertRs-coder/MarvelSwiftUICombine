@@ -25,11 +25,15 @@ struct SeriesRowView: View {
                             VStack{
                                 let scale = gesScale(proxy: proxy)
                                 
-                                AsyncImage(url: URL(string: "\(serie.thumbnail.path)/portrait_xlarge.jpg")) { photoDownloaded in
+                                AsyncImage(url: URL(string: "\(serie.thumbnail.path)/standard_medium.jpg")) { photoDownloaded in
                                     photoDownloaded
                                         .resizable()
-                                        .scaledToFill()
+                                        #if os(watchOS)
+                                        .frame(width: 100, height: 100)
+                                        #else
                                         .frame(width: 150)
+                                        #endif
+                                        .scaledToFill()
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 5)
                                                 .stroke(lineWidth: 0.5)
@@ -43,8 +47,12 @@ struct SeriesRowView: View {
                                 } placeholder: {
                                     Image(systemName: "photo")
                                         .resizable()
-                                        .scaledToFill()
+                                        #if os(watchOS)
+                                        .frame(width: 100, height: 100)
+                                        #else
                                         .frame(width: 150)
+                                        #endif
+                                        .scaledToFill()
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 5)
                                                 .stroke(lineWidth: 0.5)
@@ -63,7 +71,13 @@ struct SeriesRowView: View {
                             
                         }
         //                            .background(.red) //At first is need it to see the exact frame
+                        
+                        
+                        #if os(watchOS)
+                        .frame(width: 75, height: 150)
+                        #else
                         .frame(width: 125, height: 300)
+                        #endif
                     }
                 }
             }
@@ -72,8 +86,8 @@ struct SeriesRowView: View {
     }
 }
 
-//struct SeriesRowView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SeriesRowView(viewModel: MediaViewModel(heroId: <#Int#>), animationAmount: .constant(1))
-//    }
-//}
+struct SeriesRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        SeriesRowView(viewModel: MediaViewModel(heroId: 1017857, heroName: "Peggy Carter (Captain Carter)"), animationAmount: .constant(1))
+    }
+}
