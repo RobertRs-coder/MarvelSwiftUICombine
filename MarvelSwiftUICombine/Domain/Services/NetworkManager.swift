@@ -1,5 +1,5 @@
 //
-//  BaseNetwork.swift
+//  NetworkManager.swift
 //  MarvelSwiftUICombine
 //
 //  Created by Roberto Rojo Sahuquillo on 13/11/22.
@@ -28,7 +28,7 @@ enum parameters: String {
     case ts = "1"
 }
 
-struct BaseNetwork{
+struct NetworkManager{
     
     func getSessionHeroes() -> URLRequest{
         //Create url with need it parameters

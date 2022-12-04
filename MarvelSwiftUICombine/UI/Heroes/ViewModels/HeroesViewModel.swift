@@ -26,7 +26,7 @@ final class HeroesViewModel: ObservableObject {
         self.status = .loading
         
         URLSession.shared
-            .dataTaskPublisher(for: BaseNetwork().getSessionHeroes())
+            .dataTaskPublisher(for: NetworkManager().getSessionHeroes())
             .tryMap{
                 guard let response = $0.response as? HTTPURLResponse,
                       response.statusCode == 200 else {

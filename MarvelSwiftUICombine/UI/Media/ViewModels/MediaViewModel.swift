@@ -29,7 +29,10 @@ final class MediaViewModel: ObservableObject {
         self.getHeroComics()
         self.getHeroSeries()
         
-        self.status = Status.loaded
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+            self.status = Status.loaded
+
+        }
 
     }
     
@@ -45,7 +48,7 @@ final class MediaViewModel: ObservableObject {
 //        cancelAll()
         
         URLSession.shared
-            .dataTaskPublisher(for: BaseNetwork().getSessionHeroComics(heroId: heroId))
+            .dataTaskPublisher(for: NetworkManager().getSessionHeroComics(heroId: heroId))
             .tryMap{
                 guard let response = $0.response as? HTTPURLResponse,
                       response.statusCode == 200 else {
@@ -77,7 +80,7 @@ final class MediaViewModel: ObservableObject {
 //        cancelAll()
         
         URLSession.shared
-            .dataTaskPublisher(for: BaseNetwork().getSessionHeroSeries(heroId: heroId))
+            .dataTaskPublisher(for: NetworkManager().getSessionHeroSeries(heroId: heroId))
             .tryMap{
                 guard let response = $0.response as? HTTPURLResponse,
                       response.statusCode == 200 else {

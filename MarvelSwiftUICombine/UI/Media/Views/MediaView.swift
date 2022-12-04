@@ -14,13 +14,14 @@ struct MediaView: View {
     init(viewModel: MediaViewModel){
         self.viewModel = viewModel
         
-        let appearance = UINavigationBarAppearance()
         #if os(watchOS)
+//        appearance.largeTitleTextAttributes = [
+//                    .font : UIFont.systemFont(ofSize: 35)]
+        #else
+        let appearance = UINavigationBarAppearance()
+        
         appearance.largeTitleTextAttributes = [
                     .font : UIFont.systemFont(ofSize: 35)]
-        #else
-        appearance.largeTitleTextAttributes = [
-                    .font : UIFont.systemFont(ofSize: 15)]
         #endif
         
 //        UINavigationBar.appearance().scrollEdgeAppearance = appearance
