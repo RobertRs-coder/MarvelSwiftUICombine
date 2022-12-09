@@ -13,25 +13,23 @@ struct MediaView: View {
     
     init(viewModel: MediaViewModel){
         self.viewModel = viewModel
-        
-        #if os(watchOS)
+
+//        #if os(watchOS)
 //        appearance.largeTitleTextAttributes = [
-//                    .font : UIFont.systemFont(ofSize: 35)]
-        #else
-        let appearance = UINavigationBarAppearance()
+//                    .font : UIFont.systemFont(ofSize: 10)]
+//        #else
         
-        appearance.largeTitleTextAttributes = [
-                    .font : UIFont.systemFont(ofSize: 35)]
-        #endif
-        
-//        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-//        UINavigationBar.appearance().standardAppearance = appearance
+//        let appearance = UINavigationBarAppearance()
+//        appearance.largeTitleTextAttributes = [
+//                    .font : UIFont.systemFont(ofSize: 10)]
+//        #endif
         
     }
-    
 
     var body: some View {
+        
         NavigationStack{
+            
             ScrollView{
   
                 Text("Comics")

@@ -21,8 +21,18 @@ final class HeroesViewModel: ObservableObject {
     init(){
         getHeroes()
     }
+    
+    //Cancel all subcribers
+    func cancelAll(){
+        subscriptions.forEach { AnyCancellable in
+            AnyCancellable.cancel()
+        }
+    }
         
     func getHeroes(){
+        
+        cancelAll()
+        
         self.status = .loading
         
         URLSession.shared

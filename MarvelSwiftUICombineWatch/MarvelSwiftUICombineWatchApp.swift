@@ -1,6 +1,6 @@
 //
-//  DragonBallSwiftUICombineWatchApp.swift
-//  DragonBallSwiftUICombineWatch Watch App
+//  MarvelSwiftUICombineWatchApp.swift
+//  MarvelSwiftUICombineWatch
 //
 //  Created by Roberto Rojo Sahuquillo on 17/11/22.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct MarvelSwiftUICombineApp_Watch_AppApp: App {
+struct MarvelSwiftUICombineWatchApp: App {
     var body: some Scene {
         WindowGroup {
             HeroesMainView()

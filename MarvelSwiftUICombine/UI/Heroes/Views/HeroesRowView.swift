@@ -14,7 +14,7 @@ struct HeroesRowView: View {
     var body: some View {
         
         ZStack{
-            AsyncImage(url: URL(string: "\(hero.thumbnail.path)/standard_medium.jpg")) { photoDownloaded in
+            AsyncImage(url: URL(string: "\(hero.thumbnail.path)/standard_large.jpg")) { photoDownloaded in
                 photoDownloaded
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -34,7 +34,7 @@ struct HeroesRowView: View {
                 .padding(10)
         }
         .padding(20)
-        .background(Color.mint)
+        .background(Color.red.opacity(0.9))
         .cornerRadius(20)
         .opacity(0.8)
     }

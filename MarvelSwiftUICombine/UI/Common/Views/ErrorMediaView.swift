@@ -25,7 +25,11 @@ struct ErrorMediaView: View {
                 Image(systemName: "exclamationmark.bubble")
                     .resizable()
                     .foregroundColor(.red)
+                #if os(watchOS)
+                    .frame(width: 50, height: 50)
+                #else
                     .frame(width: 200, height: 200)
+                #endif
                     .padding()
                 Text(textError)
                     .foregroundColor(.red)

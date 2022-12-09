@@ -182,20 +182,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2334034029234A66007B9570 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				23D76917293531E6001EF90B /* ComicsRowView.swift */,
-				23FDF7E32935E3B100442A5B /* SeriesRowView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		235DA0492921B23500748122 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				238BAE7F292AA6DF007D5627 /* MediaMainView.swift */,
 				23D7690829351612001EF90B /* MediaView.swift */,
+				23D76917293531E6001EF90B /* ComicsRowView.swift */,
+				23FDF7E32935E3B100442A5B /* SeriesRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,14 +254,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		23E088312926CD880084F63A /* DragonBallSwiftUICombineWatch Watch App */ = {
+		23E088312926CD880084F63A /* MarvelSwiftUICombineWatch */ = {
 			isa = PBXGroup;
 			children = (
 				23E088322926CD880084F63A /* MarvelSwiftUICombineWatchApp.swift */,
 				23E088362926CD890084F63A /* Assets.xcassets */,
 				23E088382926CD890084F63A /* Preview Content */,
 			);
-			path = "DragonBallSwiftUICombineWatch Watch App";
+			path = MarvelSwiftUICombineWatch;
 			sourceTree = "<group>";
 		};
 		23E088382926CD890084F63A /* Preview Content */ = {
@@ -287,7 +280,7 @@
 				23F0B2FE292166920061B933 /* MarvelSwiftUICombine */,
 				23F0B310292166940061B933 /* MarvelSwiftUICombineTests */,
 				23F0B31A292166940061B933 /* MarvelSwiftUICombineUITests */,
-				23E088312926CD880084F63A /* DragonBallSwiftUICombineWatch Watch App */,
+				23E088312926CD880084F63A /* MarvelSwiftUICombineWatch */,
 				23F0B2FD292166920061B933 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -382,7 +375,6 @@
 				235DA0532921CD5000748122 /* Common */,
 				238BAE72292AA4B5007D5627 /* Heroes */,
 				23F0B331292167550061B933 /* Media */,
-				23F0B3322921675D0061B933 /* Comics */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -394,14 +386,6 @@
 				235DA04A2921B23B00748122 /* ViewModels */,
 			);
 			path = Media;
-			sourceTree = "<group>";
-		};
-		23F0B3322921675D0061B933 /* Comics */ = {
-			isa = PBXGroup;
-			children = (
-				2334034029234A66007B9570 /* Views */,
-			);
-			path = Comics;
 			sourceTree = "<group>";
 		};
 		23F0B333292167D30061B933 /* Resources */ = {
@@ -418,8 +402,8 @@
 				23F0B335292174100061B933 /* HeroModel.swift */,
 				23F0B3432921A7DD0061B933 /* StatusModel.swift */,
 				23340330292339EB007B9570 /* ComicModel.swift */,
-				2334033429233A54007B9570 /* Thumbnail.swift */,
 				23D7691229353181001EF90B /* SerieModel.swift */,
+				2334033429233A54007B9570 /* Thumbnail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -712,7 +696,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DragonBallSwiftUICombineWatch Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MarvelSwiftUICombineWatch/Preview Content\"";
+				DEVELOPMENT_TEAM = B8VLRHF5DU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MarvelSwiftUICombineWatchApp-Info.plist";
@@ -741,7 +726,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DragonBallSwiftUICombineWatch Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MarvelSwiftUICombineWatch/Preview Content\"";
+				DEVELOPMENT_TEAM = B8VLRHF5DU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MarvelSwiftUICombineWatchApp-Info.plist";
@@ -882,6 +868,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelSwiftUICombine/Preview Content\"";
+				DEVELOPMENT_TEAM = B8VLRHF5DU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarvelSwiftUICombine/Info.plist;
@@ -900,7 +887,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.DragonBallSwiftUICombine.MarvelSwiftUICombine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.MarvelSwiftUICombine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -921,6 +908,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelSwiftUICombine/Preview Content\"";
+				DEVELOPMENT_TEAM = B8VLRHF5DU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarvelSwiftUICombine/Info.plist;
@@ -939,7 +927,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.DragonBallSwiftUICombine.MarvelSwiftUICombine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.MarvelSwiftUICombine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -962,7 +950,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.DragonBallSwiftUICombine.MarvelSwiftUICombineTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.MarvelSwiftUICombineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -984,7 +972,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.DragonBallSwiftUICombine.MarvelSwiftUICombineTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.MarvelSwiftUICombineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -1005,7 +993,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.DragonBallSwiftUICombine.MarvelSwiftUICombineUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.MarvelSwiftUICombineUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -1026,7 +1014,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.DragonBallSwiftUICombine.MarvelSwiftUICombineUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robert.rs.MarvelSwiftUICombineUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

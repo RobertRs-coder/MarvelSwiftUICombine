@@ -24,15 +24,7 @@ final class MediaViewModel: ObservableObject {
         self.heroName = heroName
         self.heroId = heroId
         
-        self.status = .loading
-        
-        self.getHeroComics()
-        self.getHeroSeries()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
-            self.status = Status.loaded
-
-        }
+        getApiData()
 
     }
     
@@ -40,6 +32,21 @@ final class MediaViewModel: ObservableObject {
     func cancelAll(){
         subscriptions.forEach { AnyCancellable in
             AnyCancellable.cancel()
+        }
+    }
+    
+    
+    func getApiData(){
+        
+        self.status = .loading
+        
+        cancelAll()
+        
+        self.getHeroComics()
+        self.getHeroSeries()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5){
+            self.status = Status.loaded
         }
     }
         
@@ -105,5 +112,4 @@ final class MediaViewModel: ObservableObject {
             .store(in: &subscriptions)
         
             }
-    
 }
