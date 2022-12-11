@@ -21,7 +21,7 @@ struct MediaView: View {
 //                    .font : UIFont.systemFont(ofSize: 10)]
         watchOS = true
         #else
-        
+        //This isn't work because because later I modify the displaymode
         let appearance = UINavigationBarAppearance()
         appearance.largeTitleTextAttributes = [
                     .font : UIFont.systemFont(ofSize: 15)]
