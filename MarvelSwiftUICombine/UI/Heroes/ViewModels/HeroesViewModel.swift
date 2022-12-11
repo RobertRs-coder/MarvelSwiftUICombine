@@ -12,8 +12,6 @@ import Combine
 final class HeroesViewModel: ObservableObject {
     
     @Published var heroes: [Hero]?
-//    @Published var comics: [Comic]?
-//    @Published var comics: [Comic]?
     @Published var status = Status.none
     
     private var subscriptions = Set<AnyCancellable>()
@@ -58,7 +56,6 @@ final class HeroesViewModel: ObservableObject {
                 self.heroes = data.data.results
             }
             .store(in: &subscriptions)
-        
         
             }
 }

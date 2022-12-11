@@ -15,18 +15,16 @@ struct LoadingView: View {
             Circle()
                 .fill(.red)
                 .frame(width: 150, height: 150, alignment: .center)
-//                .offset(x: 0.0, y: 0.0)
                 .scaleEffect(animate ? 1.0 : 0.5)
-                //.animation(Animation.easeInOut(duration: 0.5).repeatForever()) < iOS16
                 .animation(.easeInOut(duration: 0.5).repeatForever(), value: animate)
             Text("Loading")
                 .foregroundColor(.white)
-//                .offset(x: 0.0, y: 0.0)
                 .padding()
-//                .font(.title2)
         }
         .onAppear{
-            self.animate = true
+            DispatchQueue.main.async {
+                self.animate = true
+            }
         }
         .onDisappear{
             self.animate = false

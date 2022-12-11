@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HeroesRowView: View {
     var hero: Hero
-//    @State private var heroDescription: String
     
     var body: some View {
         

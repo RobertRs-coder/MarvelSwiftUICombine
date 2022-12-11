@@ -10,19 +10,22 @@ import SwiftUI
 struct MediaView: View {
     @ObservedObject var viewModel: MediaViewModel
     @State var animationAmount = 1
+    private var watchOS = false
     
     init(viewModel: MediaViewModel){
         self.viewModel = viewModel
 
-//        #if os(watchOS)
+        #if os(watchOS)
+//        //Problem with text size in watchOS
 //        appearance.largeTitleTextAttributes = [
 //                    .font : UIFont.systemFont(ofSize: 10)]
-//        #else
+        watchOS = true
+        #else
         
-//        let appearance = UINavigationBarAppearance()
-//        appearance.largeTitleTextAttributes = [
-//                    .font : UIFont.systemFont(ofSize: 10)]
-//        #endif
+        let appearance = UINavigationBarAppearance()
+        appearance.largeTitleTextAttributes = [
+                    .font : UIFont.systemFont(ofSize: 15)]
+        #endif
         
     }
 
@@ -40,9 +43,8 @@ struct MediaView: View {
                     .font(.title2)
                 SeriesRowView(viewModel: viewModel, animationAmount: $animationAmount)
             }
-            
-        .navigationBarTitle(viewModel.heroName)
-
+            .navigationBarTitleDisplayMode(watchOS ? .inline : .large)
+            .navigationBarTitle(viewModel.heroName)
         }
         
     }

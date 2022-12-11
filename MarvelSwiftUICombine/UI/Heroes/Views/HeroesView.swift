@@ -12,7 +12,7 @@ struct HeroesView: View {
     
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             List{
                 if let heroes = viewModel.heroes{
                     ForEach(heroes) { hero in
@@ -21,13 +21,11 @@ struct HeroesView: View {
                         } label: {
                             HeroesRowView(hero: hero)
                         }
-
                     }
-//                    .listRowBackground(Color.teal)
                 }
             }
-//            .scrollContentBackground(.hidden)
-//            .background(Color.teal)
+            .navigationBarHidden(true)
+
         }
     }
 }
