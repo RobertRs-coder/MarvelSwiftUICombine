@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import UIKit
 
 @main
 struct MarvelSwiftUICombineWatchApp: App {
+   
     var body: some Scene {
         WindowGroup {
             HeroesMainView()

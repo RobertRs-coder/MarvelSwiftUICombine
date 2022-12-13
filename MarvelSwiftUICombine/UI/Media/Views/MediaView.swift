@@ -10,29 +10,16 @@ import SwiftUI
 struct MediaView: View {
     @ObservedObject var viewModel: MediaViewModel
     @State var animationAmount = 1
-    private var watchOS = false
     
     init(viewModel: MediaViewModel){
-        self.viewModel = viewModel
-
-        #if os(watchOS)
-//        //Problem with text size in watchOS
-//        appearance.largeTitleTextAttributes = [
-//                    .font : UIFont.systemFont(ofSize: 10)]
-        watchOS = true
-        #else
-        //This isn't work because because later I modify the displaymode
-        let appearance = UINavigationBarAppearance()
-        appearance.largeTitleTextAttributes = [
-                    .font : UIFont.systemFont(ofSize: 15)]
-        #endif
         
+        self.viewModel = viewModel
     }
 
     var body: some View {
         
         NavigationStack{
-            
+
             ScrollView{
   
                 Text("Comics")
@@ -43,10 +30,11 @@ struct MediaView: View {
                     .font(.title2)
                 SeriesRowView(viewModel: viewModel, animationAmount: $animationAmount)
             }
-            .navigationBarTitleDisplayMode(watchOS ? .inline : .large)
+            #if os(watchOS)
+            .navigationBarTitleDisplayMode(.inline)
+            #endif
             .navigationBarTitle(viewModel.heroName)
         }
-        
     }
 }
 

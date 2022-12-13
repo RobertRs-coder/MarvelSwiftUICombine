@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23011F8329465A4100DC717E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23011F8229465A4000DC717E /* AppDelegate.swift */; };
+		23011F8429465A4100DC717E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23011F8229465A4000DC717E /* AppDelegate.swift */; };
+		23011F8529465A4100DC717E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23011F8229465A4000DC717E /* AppDelegate.swift */; };
+		23011F8629465A4100DC717E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23011F8229465A4000DC717E /* AppDelegate.swift */; };
 		23340331292339EB007B9570 /* ComicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23340330292339EB007B9570 /* ComicModel.swift */; };
 		23340332292339EB007B9570 /* ComicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23340330292339EB007B9570 /* ComicModel.swift */; };
 		23340333292339EB007B9570 /* ComicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23340330292339EB007B9570 /* ComicModel.swift */; };
@@ -112,6 +116,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23011F8229465A4000DC717E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23340330292339EB007B9570 /* ComicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicModel.swift; sourceTree = "<group>"; };
 		2334033429233A54007B9570 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
 		235DA04F2921C5AC00748122 /* HeroesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRowView.swift; sourceTree = "<group>"; };
@@ -339,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				23F0B2FF292166920061B933 /* MarvelSwiftUICombineApp.swift */,
+				23011F8229465A4000DC717E /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 				23D7691B293531E6001EF90B /* ComicsRowView.swift in Sources */,
 				23FDF7E72935E3B100442A5B /* SeriesRowView.swift in Sources */,
 				23E088462926CDC00084F63A /* NetworkManager.swift in Sources */,
+				23011F8629465A4100DC717E /* AppDelegate.swift in Sources */,
 				238BAE83292AA6DF007D5627 /* MediaMainView.swift in Sources */,
 				23D7691129351E9B001EF90B /* ErrorMediaView.swift in Sources */,
 			);
@@ -613,6 +620,7 @@
 				23340331292339EB007B9570 /* ComicModel.swift in Sources */,
 				23FDF7E42935E3B100442A5B /* SeriesRowView.swift in Sources */,
 				23D76918293531E6001EF90B /* ComicsRowView.swift in Sources */,
+				23011F8329465A4100DC717E /* AppDelegate.swift in Sources */,
 				238BAE80292AA6DF007D5627 /* MediaMainView.swift in Sources */,
 				23D7690E29351E9B001EF90B /* ErrorMediaView.swift in Sources */,
 			);
@@ -640,6 +648,7 @@
 				23D76919293531E6001EF90B /* ComicsRowView.swift in Sources */,
 				23FDF7E52935E3B100442A5B /* SeriesRowView.swift in Sources */,
 				23F0B312292166940061B933 /* MarvelSwiftUICombineTests.swift in Sources */,
+				23011F8429465A4100DC717E /* AppDelegate.swift in Sources */,
 				238BAE81292AA6DF007D5627 /* MediaMainView.swift in Sources */,
 				23D7690F29351E9B001EF90B /* ErrorMediaView.swift in Sources */,
 			);
@@ -649,6 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23011F8529465A4100DC717E /* AppDelegate.swift in Sources */,
 				23F0B338292174100061B933 /* HeroModel.swift in Sources */,
 				238BAE82292AA6DF007D5627 /* MediaMainView.swift in Sources */,
 				23E0883F2926CDAE0084F63A /* HeroesMainView.swift in Sources */,

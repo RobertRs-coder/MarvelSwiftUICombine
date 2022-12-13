@@ -21,6 +21,9 @@ struct LoadingView: View {
                 .foregroundColor(.white)
                 .padding()
         }
+//        .task {
+//            self.animate = true
+//        }
         .onAppear{
             DispatchQueue.main.async {
                 self.animate = true
