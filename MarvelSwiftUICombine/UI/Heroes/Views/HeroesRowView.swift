@@ -12,7 +12,7 @@ struct HeroesRowView: View {
     
     var body: some View {
         
-        ZStack{
+        ZStack(alignment: Alignment.center) {
             AsyncImage(url: URL(string: "\(hero.thumbnail.path)/standard_large.jpg")) { photoDownloaded in
                 photoDownloaded
                     .resizable()
@@ -29,13 +29,13 @@ struct HeroesRowView: View {
             
             Text("\(hero.name)")
 #if os(watchOS)
-                    .font(.title3)
+                .font(.title3)
 #else
-                    .font(.title)
+                .font(.title)
 #endif
-                .padding(10)
+                .padding([.leading,.trailing], 5)
         }
-        .padding(20)
+        .padding(10)
         .background(Color.red.opacity(0.9))
         .cornerRadius(20)
         .opacity(0.8)
