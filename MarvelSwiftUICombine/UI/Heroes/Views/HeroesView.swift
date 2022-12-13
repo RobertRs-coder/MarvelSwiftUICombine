@@ -24,8 +24,6 @@ struct HeroesView: View {
                     }
                 }
             }
-            .navigationBarHidden(true)
-
         }
     }
 }

@@ -28,8 +28,11 @@ struct HeroesRowView: View {
             }
             
             Text("\(hero.name)")
-                .font(Font.custom("Marker Felt Thin", size: 26, relativeTo: .title2))
-//                .bold()
+#if os(watchOS)
+                    .font(.title3)
+#else
+                    .font(.title)
+#endif
                 .padding(10)
         }
         .padding(20)
