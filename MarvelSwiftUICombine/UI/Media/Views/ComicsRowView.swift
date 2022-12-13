@@ -25,11 +25,11 @@ struct ComicsRowView: View {
                                 AsyncImage(url: URL(string: "\(comic.thumbnail.path)/portrait_large.jpg")) { photoDownloaded in
                                     photoDownloaded
                                         .resizable()
-                                        #if os(watchOS)
+#if os(watchOS)
                                         .frame(width: 100, height: 100)
-                                        #else
+#else
                                         .frame(width: 150, height: 225)
-                                        #endif
+#endif
                                         .scaledToFit()
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 5)
@@ -44,11 +44,11 @@ struct ComicsRowView: View {
                                 } placeholder: {
                                     Image(systemName: "photo")
                                         .resizable()
-                                        #if os(watchOS)
+#if os(watchOS)
                                         .frame(width: 100, height: 100)
-                                        #else
+#else
                                         .frame(width: 150, height: 225)
-                                        #endif
+#endif
                                         .scaledToFit()
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 5)
@@ -68,11 +68,11 @@ struct ComicsRowView: View {
                             
                         }
         //                            .background(.red) //At first is need it to see the exact frame
-                    #if os(watchOS)
+#if os(watchOS)
                     .frame(width: 75, height: 150)
-                    #else
+#else
                     .frame(width: 150, height: 300)
-                    #endif
+#endif
                     }
                 }
             }
