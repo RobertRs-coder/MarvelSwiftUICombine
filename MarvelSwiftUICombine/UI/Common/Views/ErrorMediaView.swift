@@ -30,10 +30,11 @@ struct ErrorMediaView: View {
 #else
                     .frame(width: 200, height: 200)
 #endif
-                    .padding()
+                    .padding(10)
                 Text(textError)
                     .foregroundColor(.red)
                     .font(.headline)
+                    .padding(10)
                 Spacer()
             }
         }

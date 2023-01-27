@@ -10,7 +10,7 @@ import SwiftUI
 
 extension View {
     
-    func gesScale(proxy: GeometryProxy) -> CGFloat {
+    func getScale(proxy: GeometryProxy) -> CGFloat {
         var scale: CGFloat = 1
         
         let x = proxy.frame(in: .global).minX

@@ -21,7 +21,7 @@ struct SeriesRowView: View {
                         GeometryReader { proxy in
                             
                             VStack{
-                                let scale = gesScale(proxy: proxy)
+                                let scale = getScale(proxy: proxy)
                                 
                                 AsyncImage(url: URL(string: "\(serie.thumbnail.path)/portrait_large.jpg")) { photoDownloaded in
                                     photoDownloaded
