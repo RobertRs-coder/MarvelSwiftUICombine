@@ -13,6 +13,9 @@
 		2334033529233A54007B9570 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2334033429233A54007B9570 /* Thumbnail.swift */; };
 		2334033629233A54007B9570 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2334033429233A54007B9570 /* Thumbnail.swift */; };
 		2334033729233A54007B9570 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2334033429233A54007B9570 /* Thumbnail.swift */; };
+		234D396F2985A75200E46897 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 234D396E2985A75200E46897 /* ViewInspector */; };
+		234D39752985ACA300E46897 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234D39742985ACA300E46897 /* XCTest.framework */; };
+		234D39772985ACD400E46897 /* LoadingView_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234D39762985ACD400E46897 /* LoadingView_Tests.swift */; };
 		235DA0502921C5AC00748122 /* HeroesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DA04F2921C5AC00748122 /* HeroesRowView.swift */; };
 		235DA0512921C5AC00748122 /* HeroesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DA04F2921C5AC00748122 /* HeroesRowView.swift */; };
 		235DA0522921C5AC00748122 /* HeroesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DA04F2921C5AC00748122 /* HeroesRowView.swift */; };
@@ -116,6 +119,8 @@
 /* Begin PBXFileReference section */
 		23340330292339EB007B9570 /* ComicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicModel.swift; sourceTree = "<group>"; };
 		2334033429233A54007B9570 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		234D39742985ACA300E46897 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		234D39762985ACD400E46897 /* LoadingView_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView_Tests.swift; sourceTree = "<group>"; };
 		235DA04F2921C5AC00748122 /* HeroesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRowView.swift; sourceTree = "<group>"; };
 		235DA0552921CD7900748122 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		235DA0592921CD8100748122 /* ErrorViewHeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewHeroes.swift; sourceTree = "<group>"; };
@@ -166,6 +171,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234D39752985ACA300E46897 /* XCTest.framework in Frameworks */,
+				234D396F2985A75200E46897 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +193,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		234D39702985A8FF00E46897 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				234D39762985ACD400E46897 /* LoadingView_Tests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		234D39732985ACA300E46897 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				234D39742985ACA300E46897 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		235DA0492921B23500748122 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +318,7 @@
 				23F0B31A292166940061B933 /* MarvelSwiftUICombineUITests */,
 				23E088312926CD880084F63A /* MarvelSwiftUICombineWatch */,
 				23F0B2FD292166920061B933 /* Products */,
+				234D39732985ACA300E46897 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -335,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				23885B7F29844EC2000D0346 /* NetworkManager_Tests.swift */,
+				234D39702985A8FF00E46897 /* Views */,
 				23885B7E298449E0000D0346 /* ViewModels */,
 			);
 			path = MarvelSwiftUICombineTests;
@@ -455,6 +480,9 @@
 			dependencies = (
 			);
 			name = MarvelSwiftUICombine;
+			packageProductDependencies = (
+				234D396E2985A75200E46897 /* ViewInspector */,
+			);
 			productName = MarvelSwiftUICombine;
 			productReference = 23F0B2FC292166920061B933 /* MarvelSwiftUICombine.app */;
 			productType = "com.apple.product-type.application";
@@ -503,7 +531,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					23E0882F2926CD880084F63A = {
 						CreatedOnToolsVersion = 14.1;
@@ -530,6 +558,9 @@
 				Base,
 			);
 			mainGroup = 23F0B2F3292166920061B933;
+			packageReferences = (
+				234D396D2985A75200E46897 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 23F0B2FD292166920061B933 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -636,6 +667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234D39772985ACD400E46897 /* LoadingView_Tests.swift in Sources */,
 				23D7691429353181001EF90B /* SerieModel.swift in Sources */,
 				23885B8729845145000D0346 /* MediaViewModel_Tests.swift in Sources */,
 				238BAE6F292AA45B007D5627 /* MediaViewModel.swift in Sources */,
@@ -801,6 +833,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -859,6 +892,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -883,8 +917,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MarvelSwiftUICombine/MarvelSwiftUICombine.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelSwiftUICombine/Preview Content\"";
 				DEVELOPMENT_TEAM = B8VLRHF5DU;
 				ENABLE_PREVIEWS = YES;
@@ -923,8 +959,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MarvelSwiftUICombine/MarvelSwiftUICombine.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelSwiftUICombine/Preview Content\"";
 				DEVELOPMENT_TEAM = B8VLRHF5DU;
 				ENABLE_PREVIEWS = YES;
@@ -964,6 +1002,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = B8VLRHF5DU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -987,6 +1026,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = B8VLRHF5DU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -1009,6 +1049,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = B8VLRHF5DU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -1031,6 +1072,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = B8VLRHF5DU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -1096,6 +1138,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		234D396D2985A75200E46897 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		234D396E2985A75200E46897 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 234D396D2985A75200E46897 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 23F0B2F4292166920061B933 /* Project object */;
 }

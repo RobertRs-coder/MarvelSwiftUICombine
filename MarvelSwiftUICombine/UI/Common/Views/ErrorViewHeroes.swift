@@ -31,9 +31,12 @@ struct ErrorHeroesView: View {
                     .frame(width: 200, height: 200)
 #endif
                     .padding()
+                    .id("Image")
+                
                 Text(textError)
                     .foregroundColor(.red)
                     .font(.headline)
+                    .id("Text")
                 Spacer()
             }
         }

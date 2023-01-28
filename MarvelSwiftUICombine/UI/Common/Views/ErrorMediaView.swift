@@ -22,6 +22,7 @@ struct ErrorMediaView: View {
             //The Error Functionality
             VStack{
                 Spacer()
+                
                 Image(systemName: "exclamationmark.bubble")
                     .resizable()
                     .foregroundColor(.red)
@@ -31,10 +32,14 @@ struct ErrorMediaView: View {
                     .frame(width: 200, height: 200)
 #endif
                     .padding(10)
+                    .id("Image")
+                
                 Text(textError)
                     .foregroundColor(.red)
                     .font(.headline)
                     .padding(10)
+                    .id("Text")
+                
                 Spacer()
             }
         }

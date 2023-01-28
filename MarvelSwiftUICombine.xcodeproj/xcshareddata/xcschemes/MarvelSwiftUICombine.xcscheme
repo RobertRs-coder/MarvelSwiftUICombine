@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "23E0882F2926CD880084F63A"
-               BuildableName = "MarvelSwiftUICombineWatch.app"
-               BlueprintName = "MarvelSwiftUICombineWatchApp"
+               BlueprintIdentifier = "23F0B2FB292166920061B933"
+               BuildableName = "MarvelSwiftUICombine.app"
+               BlueprintName = "MarvelSwiftUICombine"
                ReferencedContainer = "container:MarvelSwiftUICombine.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,8 +26,31 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "23F0B30C292166940061B933"
+               BuildableName = "MarvelSwiftUICombineTests.xctest"
+               BlueprintName = "MarvelSwiftUICombineTests"
+               ReferencedContainer = "container:MarvelSwiftUICombine.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "23F0B316292166940061B933"
+               BuildableName = "MarvelSwiftUICombineUITests.xctest"
+               BlueprintName = "MarvelSwiftUICombineUITests"
+               ReferencedContainer = "container:MarvelSwiftUICombine.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -44,9 +67,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "23E0882F2926CD880084F63A"
-            BuildableName = "MarvelSwiftUICombineWatch.app"
-            BlueprintName = "MarvelSwiftUICombineWatchApp"
+            BlueprintIdentifier = "23F0B2FB292166920061B933"
+            BuildableName = "MarvelSwiftUICombine.app"
+            BlueprintName = "MarvelSwiftUICombine"
             ReferencedContainer = "container:MarvelSwiftUICombine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +84,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "23E0882F2926CD880084F63A"
-            BuildableName = "MarvelSwiftUICombineWatch.app"
-            BlueprintName = "MarvelSwiftUICombineWatchApp"
+            BlueprintIdentifier = "23F0B2FB292166920061B933"
+            BuildableName = "MarvelSwiftUICombine.app"
+            BlueprintName = "MarvelSwiftUICombine"
             ReferencedContainer = "container:MarvelSwiftUICombine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

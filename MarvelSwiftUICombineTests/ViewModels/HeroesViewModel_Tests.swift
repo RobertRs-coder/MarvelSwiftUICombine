@@ -10,6 +10,8 @@ import Combine
 @testable import MarvelSwiftUICombine
 
 // Naming Structure: test_UnitofWork_StateUnderTest_ExpectBehavior
+// Naming Structure: test_[class or struct]_[variable or function]_[expected value]
+// Testing Structure: Given, When, Then
 
 final class HeroesViewModel_Tests: XCTestCase {
     

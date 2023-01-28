@@ -17,9 +17,12 @@ struct LoadingView: View {
                 .frame(width: 150, height: 150, alignment: .center)
                 .scaleEffect(animate ? 1.0 : 0.5)
                 .animation(.easeInOut(duration: 0.5).repeatForever(), value: animate)
+                .id("Circle")
+            
             Text("Loading")
                 .foregroundColor(.white)
                 .padding()
+                .id("Text")
         }
 //        .task {
 //            self.animate = true
