@@ -45,7 +45,7 @@ final class MediaViewModel: ObservableObject {
         self.getHeroComics()
         self.getHeroSeries()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
             self.status = Status.loaded
         }
     }
