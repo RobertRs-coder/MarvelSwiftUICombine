@@ -63,9 +63,12 @@ struct SeriesRowView: View {
                                         //                                            .animation(.easeInOut(duration: 0.5))  //<iOS 16
                                             .animation(.easeInOut(duration: 0.5), value: animationAmount)
                                     }
+                                    .id("Image")
+                                    
                                     Text("\(serie.title)")
                                         .padding(.top)
                                         .multilineTextAlignment(.center)
+                                        .id("textTitle")
                                     
                                     Text(serie.description ?? "No description")
 #if os(watchOS)
@@ -76,6 +79,7 @@ struct SeriesRowView: View {
                                         .padding(.top)
                                         .multilineTextAlignment(.leading)
                                         .fixedSize(horizontal: false, vertical: true)
+                                        .id("textDescription")
                                 }
                                 
                             }

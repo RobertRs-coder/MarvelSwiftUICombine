@@ -27,6 +27,8 @@ struct HeroesRowView: View {
                     .padding([.leading,.trailing], 5)
             }
             
+            .id("Image")
+            
             Text("\(hero.name)")
 #if os(watchOS)
                 .font(.title3)
@@ -34,6 +36,7 @@ struct HeroesRowView: View {
                 .font(.title)
 #endif
                 .padding([.leading,.trailing], 5)
+                .id("Text")
         }
         .padding(10)
         .background(Color.red.opacity(0.9))

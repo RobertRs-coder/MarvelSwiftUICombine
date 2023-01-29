@@ -18,10 +18,13 @@ struct HeroesMainView: View {
             Text("Start App")
         case .loading:
             LoadingView()
+                .id("LoadingView")
         case .error(error: let errorString):
             ErrorHeroesView(error: errorString)
+                .id("ErrorHeroesView")
         case .loaded:
             HeroesView()
+                .id("HeroesView")
         }
     }
 }

@@ -55,7 +55,6 @@ final class MediaViewModel_Tests: XCTestCase {
         
         sut?.getHeroComics()
         
-        
         self.waitForExpectations(timeout: 10)
     }
     
@@ -88,7 +87,6 @@ final class MediaViewModel_Tests: XCTestCase {
             .store(in: &suscriptor)
         
         sut?.getHeroSeries()
-        
         
         self.waitForExpectations(timeout: 10)
     }

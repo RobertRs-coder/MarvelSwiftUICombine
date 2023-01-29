@@ -19,10 +19,13 @@ struct MediaMainView: View {
             Text("Start App")
         case .loading:
             LoadingView()
+                .id("LoadingView")
         case .error(error: let errorString):
             ErrorMediaView(error: errorString)
+                .id("ErrorMediaView")
         case .loaded:
             MediaView(viewModel: viewModel)
+                .id("MediaView")
         }
     }
 }
